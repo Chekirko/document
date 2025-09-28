@@ -422,7 +422,7 @@ import DocumentView from "@/components/DocumentView"; // Це буде наш н
 import { notFound } from "next/navigation";
 
 interface DocumentDetailPageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 // Сторінка тепер є асинхронною функцією!
