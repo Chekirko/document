@@ -4,10 +4,12 @@ import { testDocuments } from "@/data/test-documents";
 
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
+  // { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const documentId = parseInt(params.id);
+    const { id } = await params;
+    const documentId = parseInt(id);
     const document = testDocuments.find((doc) => doc.id === documentId);
 
     if (!document) {
