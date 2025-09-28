@@ -504,6 +504,7 @@
 
 import { useState, useEffect } from "react";
 import { Search, FileText, Bot, Calendar, Filter, Hash, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface TestDocument {
   id: number;
@@ -540,6 +541,8 @@ export default function HomePage() {
   const [chatLoading, setChatLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<"search" | "chat">("search");
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
+
+  const router = useRouter();
 
   useEffect(() => {
     const activeFilters: { [key: string]: string } = {};
@@ -1044,9 +1047,10 @@ export default function HomePage() {
 
                     <div className="flex justify-between items-center pt-4 border-t border-gray-200">
                       <button
-                        onClick={() =>
-                          window.open(`/documents/${doc.id}`, "_blank")
-                        }
+                        // onClick={() =>
+                        //   window.open(`/documents/${doc.id}`, "_blank")
+                        // }
+                        onClick={() => router.push(`/documents/${doc.id}`)}
                         className="text-blue-600 hover:text-blue-800 font-medium"
                       >
                         Переглянути повний текст →
