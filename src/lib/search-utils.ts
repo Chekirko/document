@@ -1,5 +1,5 @@
-import { TestDocument } from "@/data/test-documents";
 import { AIAnalysisResult } from "./ai-service";
+import { TestDocument } from "@/types";
 
 export interface SearchResult extends TestDocument {
   confidence_score: number;
