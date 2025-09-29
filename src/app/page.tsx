@@ -725,7 +725,8 @@ interface PageProps {
 }
 
 export default async function HomePage({ searchParams }: PageProps) {
-  const activeTab = searchParams.tab || "search";
+  const resolvedSearchParams = await searchParams;
+  const activeTab = resolvedSearchParams.tab || "search";
 
   // Фільтруємо документи на сервері на основі URL параметрів
   let filteredDocuments = [...testDocuments];
