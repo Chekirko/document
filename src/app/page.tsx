@@ -721,7 +721,7 @@ interface SearchParams {
 }
 
 interface PageProps {
-  searchParams: SearchParams;
+  searchParams: Promise<SearchParams>;
 }
 
 export default async function HomePage({ searchParams }: PageProps) {
