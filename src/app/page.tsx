@@ -724,40 +724,40 @@ interface PageProps {
   searchParams: Promise<SearchParams>;
 }
 
-export default async function HomePage({ searchParams }: PageProps) {
-  const resolvedSearchParams = await searchParams;
-  const activeTab = resolvedSearchParams.tab || "search";
+export default async function HomePage(props: PageProps) {
+  const params = await props.searchParams;
+  const activeTab = params.tab || "search";
 
   // Фільтруємо документи на сервері на основі URL параметрів
   let filteredDocuments = [...testDocuments];
 
   // Фільтр за типом документа
-  if (searchParams.type) {
+  if (params.type) {
     filteredDocuments = filteredDocuments.filter(
-      (doc) => doc.document_type === searchParams.type
+      (doc) => doc.document_type === params.type
     );
   }
 
   // Фільтр за категорією
-  if (searchParams.category) {
+  if (params.category) {
     filteredDocuments = filteredDocuments.filter((doc) =>
       doc.categories.some((cat) =>
-        cat.toLowerCase().includes(searchParams.category!.toLowerCase())
+        cat.toLowerCase().includes(params.category!.toLowerCase())
       )
     );
   }
 
   // Фільтр за номером документа
-  if (searchParams.number) {
+  if (params.number) {
     filteredDocuments = filteredDocuments.filter((doc) => {
       const match = doc.title.match(/№\s*(\d+)/);
-      return match && match[1].includes(searchParams.number!);
+      return match && match[1].includes(params.number!);
     });
   }
 
   // Фільтр за датою "від"
-  if (searchParams.dateFrom) {
-    const dateFrom = new Date(searchParams.dateFrom);
+  if (params.dateFrom) {
+    const dateFrom = new Date(params.dateFrom);
     filteredDocuments = filteredDocuments.filter((doc) => {
       const docDate = new Date(doc.date_created);
       return docDate >= dateFrom;
@@ -765,8 +765,8 @@ export default async function HomePage({ searchParams }: PageProps) {
   }
 
   // Фільтр за датою "до"
-  if (searchParams.dateTo) {
-    const dateTo = new Date(searchParams.dateTo);
+  if (params.dateTo) {
+    const dateTo = new Date(params.dateTo);
     filteredDocuments = filteredDocuments.filter((doc) => {
       const docDate = new Date(doc.date_created);
       return docDate <= dateTo;
@@ -774,9 +774,9 @@ export default async function HomePage({ searchParams }: PageProps) {
   }
 
   // Семантичний пошук якщо є query
-  if (searchParams.query) {
+  if (params.query) {
     const searchResults = SearchUtils.performSemanticSearch(
-      searchParams.query,
+      params.query,
       filteredDocuments,
       20
     );
@@ -862,7 +862,7 @@ export default async function HomePage({ searchParams }: PageProps) {
             >
               <DocumentsList
                 documents={filteredDocuments}
-                searchQuery={searchParams.query}
+                searchQuery={params.query}
               />
             </Suspense>
           </div>
