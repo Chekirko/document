@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
         const queryWords = query.toLowerCase().split(" ");
         return queryWords.some((word: string) => docText.includes(word));
       })
-      .slice(0, 10); // Беремо топ 3 документи
+      .slice(0, 13); // Беремо топ 3 документи
 
     const chatResponse = await aiService.generateChatResponse(
       query,
