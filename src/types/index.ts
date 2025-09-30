@@ -1,8 +1,9 @@
 export interface TestDocument {
   id: number;
   title: string;
+  name: string;
+  short: string;
   content: string;
-  // Використовуємо строгий тип, оскільки він більш надійний
   document_type:
     | "council_decision"
     | "executive_decision"
@@ -13,6 +14,8 @@ export interface TestDocument {
   summary?: string;
   simple_explanation?: string;
   key_points?: string[];
+  confidence_score?: number;
+  semantic_similarity?: number;
 }
 
 export interface DocumentAnalysis {
