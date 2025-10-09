@@ -231,3 +231,18 @@
     content: '';
   }
 }
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4),
+                0 0 40px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.7),
+                0 0 60px rgba(99, 102, 241, 0.5);
+  }
+}
+
+.glow-banner {
+  animation: glowPulse 3s ease-in-out infinite;
+}

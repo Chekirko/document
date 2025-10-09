@@ -3,6 +3,7 @@
 import { useState, useTransition } from "react";
 import { ArrowLeft, FileText, Calendar, Tag, Brain, Clock } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Lottie from "@lottielab/lottie-player/react";
 
 // Важливо: переконайтеся, що шлях до файлу з типами правильний
 // Якщо ви створили src/lib/data.ts, як у попередньому прикладі
@@ -204,8 +205,16 @@ export default function DocumentView({ initialDocument }: DocumentViewProps) {
 
               {showAnalysis && analysis && (
                 <div className="space-y-6 animate-fade-in">
-                  {/* Simple Explanation */}
+                  <div className="p-4 bg-yellow-400 border-l-4 border-yellow-400 rounded">
+                    <p className="text-sm text-gray-700">
+                      <strong>Увага!</strong> Ця відповідь згенерована штучним
+                      інтелектом і має виключно інформаційний характер. Не є
+                      офіційним роз&apos;ясненням та не має юридичної сили.
+                    </p>
+                  </div>
                   <div className="p-4 bg-blue-50 rounded-lg">
+                    {/* Додаємо disclaimer про ШІ */}
+
                     <h3 className="font-semibold text-blue-900 mb-2 flex items-center">
                       🤝 Зрозумілою мовою:
                     </h3>
