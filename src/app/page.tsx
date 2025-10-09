@@ -246,7 +246,7 @@ function DocumentsMainContent({
 
 export default async function HomePage(props: PageProps) {
   const params = await props.searchParams;
-  const activeTab = params.tab || "search";
+  const activeTab = params.tab || "chat";
 
   // Фільтруємо документи на сервері на основі URL параметрів
   let filteredDocuments = [...testDocuments];
@@ -365,18 +365,6 @@ export default async function HomePage(props: PageProps) {
         {/* Navigation Tabs */}
         <div className="mb-8">
           <div className="flex space-x-1 bg-white rounded-lg p-1 shadow-sm">
-            {/* Пошук справа */}
-            <Link
-              href="/?tab=search"
-              className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${
-                activeTab === "search"
-                  ? "bg-blue-600 text-white shadow-sm"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-              }`}
-            >
-              <Search className="h-4 w-4" />
-              <span>Пошук документів</span>
-            </Link>
             {/* AI-Асистент зліва */}
             <Link
               href="/?tab=chat"
@@ -388,6 +376,18 @@ export default async function HomePage(props: PageProps) {
             >
               <Bot className="h-4 w-4" />
               <span>AI-Асистент</span>
+            </Link>
+            {/* Пошук справа */}
+            <Link
+              href="/?tab=search"
+              className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${
+                activeTab === "search"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+              }`}
+            >
+              <Search className="h-4 w-4" />
+              <span>Пошук документів</span>
             </Link>
           </div>
         </div>
@@ -461,11 +461,9 @@ export default async function HomePage(props: PageProps) {
           >
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-8 rounded-xl shadow-lg mb-8 glow-banner animate-fade-in">
               <h2 className="text-3xl font-bold mb-2">
-                Втомився шукати документи?
+                Запитай про потрібний тобі документ простою мовою 💬
               </h2>
-              <p className="text-lg text-blue-100">
-                Запитай про потрібне тобі рішення простою мовою 💬
-              </p>
+              <p className="text-lg text-blue-100"></p>
             </div>
             <ChatInterface />
           </Suspense>
