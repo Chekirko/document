@@ -246,7 +246,7 @@ function DocumentsMainContent({
 
 export default async function HomePage(props: PageProps) {
   const params = await props.searchParams;
-  const activeTab = params.tab || "chat";
+  const activeTab = params.tab || "search";
 
   // Фільтруємо документи на сервері на основі URL параметрів
   let filteredDocuments = [...testDocuments];
