@@ -365,19 +365,6 @@ export default async function HomePage(props: PageProps) {
         {/* Navigation Tabs */}
         <div className="mb-8">
           <div className="flex space-x-1 bg-white rounded-lg p-1 shadow-sm">
-            {/* AI-Асистент зліва */}
-            <Link
-              href="/?tab=chat"
-              className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${
-                activeTab === "chat"
-                  ? "bg-blue-600 text-white shadow-sm"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-              }`}
-            >
-              <Bot className="h-4 w-4" />
-              <span>AI-Асистент</span>
-            </Link>
-
             {/* Пошук справа */}
             <Link
               href="/?tab=search"
@@ -389,6 +376,18 @@ export default async function HomePage(props: PageProps) {
             >
               <Search className="h-4 w-4" />
               <span>Пошук документів</span>
+            </Link>
+            {/* AI-Асистент зліва */}
+            <Link
+              href="/?tab=chat"
+              className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${
+                activeTab === "chat"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+              }`}
+            >
+              <Bot className="h-4 w-4" />
+              <span>AI-Асистент</span>
             </Link>
           </div>
         </div>
