@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -146,6 +148,8 @@
   }
 }
 
+
+
 @layer base {
   * {
     @apply border-border;
@@ -246,3 +250,4 @@
 .glow-banner {
   animation: glowPulse 3s ease-in-out infinite;
 }
+
