@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="75.5065mm"
+   height="34.462463mm"
+   viewBox="0 0 75.5065 34.462464"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="victoryV1.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.78397385"
+     inkscape:cx="464.81201"
+     inkscape:cy="25.235348"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     showborder="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="776"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(335.85464,-243.88329)"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.30938869,0,0,0.30938869,-249.58858,219.48858)"
+       id="g927">
+      <g
+         transform="translate(-612.17105,2.372756)"
+         id="g935">
+        <rect
+           ry="0"
+           y="76.475357"
+           x="333.3436"
+           height="55.66206"
+           width="244.3615"
+           id="rect888"
+           style="fill:#0057b7;fill-opacity:1;stroke:none;stroke-width:1.31119;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000" />
+        <rect
+           style="fill:#ffd700;fill-opacity:1;stroke:none;stroke-width:1.31119;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+           id="rect888-0"
+           width="244.36151"
+           height="55.66206"
+           x="333.3436"
+           y="132.13742"
+           ry="0" />
+        <text
+           id="text913"
+           y="118.05233"
+           x="352.2851"
+           style="font-size:37.0417px;line-height:0.8;font-family:e-Ukraine;-inkscape-font-specification:e-Ukraine;fill:#ffffff;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-size:37.0417px;fill:#ffffff;stroke:none;stroke-width:0.264583"
+             y="118.05233"
+             x="352.2851"
+             id="tspan911"
+             sodipodi:role="line">ПЕРЕ-</tspan></text>
+        <text
+           id="text917"
+           y="173.71439"
+           x="352.2851"
+           style="font-size:37.0417px;line-height:0.8;font-family:e-Ukraine;-inkscape-font-specification:e-Ukraine;fill:#000000;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-size:37.0417px;fill:#000000;stroke:none;stroke-width:0.264583"
+             y="173.71439"
+             x="352.2851"
+             id="tspan915"
+             sodipodi:role="line">МОЖЕМО!</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
