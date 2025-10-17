@@ -72,7 +72,7 @@ export default async function HomePage(props: PageProps) {
 
       try {
         console.log(`Starting AI search for query: "${params.query}"`);
-        const searchResults = await aiService.hybridSearch(
+        const searchResults = await aiService.semanticSearch(
           params.query,
           filteredDocuments,
           20
@@ -224,7 +224,7 @@ export default async function HomePage(props: PageProps) {
               </div>
             }
           >
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-8 rounded-xl shadow-lg mb-8 animate-fade-in">
+            <div className="bg-accent-main text-white text-center py-8 rounded-xl shadow-lg mb-8 animate-fade-in">
               <h2 className="text-3xl font-bold mb-2">
                 Запитай про потрібний тобі документ простою мовою 💬
               </h2>

@@ -120,7 +120,7 @@ const DocumentSearch = ({
       <button
         onClick={handleAISearch}
         disabled={!searchQuery.trim() || isAISearching}
-        className="px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 transition-all shadow-md hover:shadow-lg"
+        className="px-4 py-3 bg-[linear-gradient(68.94deg,#c3aab2_-4.77%,#9ec_46.72%,#80c0c8_90.23%,#4b8bfa_134.46%)] text-white rounded-lg hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 transition-all shadow-md hover:shadow-lg"
         title="Семантичний пошук через AI (Shift+Enter)"
       >
         {isAISearching ? (
@@ -135,16 +135,6 @@ const DocumentSearch = ({
           </>
         )}
       </button>
-
-      {/* {searchQuery && (
-        <div className="text-xs text-gray-500 px-1">
-          Натисніть{" "}
-          <kbd className="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded text-gray-700 font-mono">
-            Shift+Enter
-          </kbd>{" "}
-          для AI пошуку
-        </div>
-      )} */}
     </div>
   );
 };
