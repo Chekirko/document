@@ -27,3 +27,20 @@ export interface DocumentAnalysis {
   confidence: number;
   processing_time: string;
 }
+
+export interface SearchParams {
+  query?: string;
+  type?: string;
+  category?: string;
+  dateFrom?: string;
+  dateTo?: string;
+  number?: string;
+  tab?: string;
+  mode?: string;
+  view?: string;
+  page?: string;
+}
+
+export interface PageProps {
+  searchParams: Promise<SearchParams>;
+}
