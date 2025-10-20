@@ -303,10 +303,7 @@ export class AIService {
     confidence: number;
   }> {
     const docsContext = relevantDocs
-      .map(
-        (doc) =>
-          `Документ: ${doc.title}\nЗміст: ${doc.content.slice(0, 2000)}\n---`
-      )
+      .map((doc) => `Документ: ${doc.title}\nЗміст: ${doc.content}\n---`)
       .join("\n");
 
     const prompt = `
