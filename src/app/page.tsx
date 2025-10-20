@@ -45,21 +45,33 @@ export default async function HomePage(props: PageProps) {
     });
   }
 
-  // Фільтр за датою "від"
-  if (params.dateFrom) {
-    const dateFrom = new Date(params.dateFrom);
-    filteredDocuments = filteredDocuments.filter((doc) => {
-      const docDate = new Date(doc.date_created);
-      return docDate >= dateFrom;
-    });
+  if (params.title) {
+    filteredDocuments = filteredDocuments.filter((doc) =>
+      doc.title.toLowerCase().includes(params.title!.toLowerCase())
+    );
   }
 
-  // Фільтр за датою "до"
-  if (params.dateTo) {
-    const dateTo = new Date(params.dateTo);
+  // 🔹 Фільтр за змістом
+  if (params.content) {
+    filteredDocuments = filteredDocuments.filter((doc) =>
+      doc.content.toLowerCase().includes(params.content!.toLowerCase())
+    );
+  }
+
+  // 🔹 Фільтр за роком і місяцем (по date_created)
+  if (params.year || params.month) {
     filteredDocuments = filteredDocuments.filter((doc) => {
       const docDate = new Date(doc.date_created);
-      return docDate <= dateTo;
+
+      const yearMatch = params.year
+        ? docDate.getFullYear().toString() === params.year
+        : true;
+
+      const monthMatch = params.month
+        ? (docDate.getMonth() + 1).toString() === params.month
+        : true;
+
+      return yearMatch && monthMatch;
     });
   }
 
@@ -159,7 +171,7 @@ export default async function HomePage(props: PageProps) {
             <h4 className="text-2xl font-bold mb-6">Рішення громади</h4>
 
             {/* Main Layout: Content + Sidebar */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-24">
               {/* Main Content - 2 columns */}
               <div className="lg:col-span-2">
                 <Suspense
@@ -178,15 +190,6 @@ export default async function HomePage(props: PageProps) {
                     currentView={currentView}
                   />
                 </Suspense>
-
-                {/* Пагінація */}
-                {totalPages > 1 && (
-                  <Pagination
-                    currentPage={currentPage}
-                    totalPages={totalPages}
-                    baseUrl={baseUrl}
-                  />
-                )}
               </div>
 
               {/* Sidebar - 1 column */}
@@ -212,6 +215,14 @@ export default async function HomePage(props: PageProps) {
                 </div>
               </div>
             </div>
+            {/* Пагінація */}
+            {totalPages > 1 && (
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                baseUrl={baseUrl}
+              />
+            )}
           </div>
         ) : (
           <Suspense

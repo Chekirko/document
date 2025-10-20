@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 import Header from "@/components/layout/Header";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
+import Footer from "@/components/layout/Footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -64,6 +65,7 @@ export default function RootLayout({
           <Providers>
             <main className="relative">{children}</main>
           </Providers>
+          <Footer />
           <ScrollToTop />
         </body>
       </html>
