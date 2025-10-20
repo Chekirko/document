@@ -1023,7 +1023,7 @@ const ChatInterface = () => {
           {isSpeaking && chatMessages.length > 0 && (
             <div className="flex justify-start">
               <div className="flex items-center gap-2 text-blue-600 text-sm">
-                <div className="w-4 h-4 rounded-full bg-blue-500 animate-ping"></div>
+                <div className="w-4 h-4 rounded-full bg-[#cdf4df] animate-ping"></div>
                 <span>Відповідь озвучується...</span>
                 <button
                   onClick={stopSpeaking}
@@ -1065,7 +1065,7 @@ const ChatInterface = () => {
               <div
                 className={`max-w-[80%] rounded-lg px-4 py-2 ${
                   message.type === "user"
-                    ? "bg-blue-600 text-white"
+                    ? "bg-[#cdf4df] text-white"
                     : "bg-gray-100 text-gray-900"
                 }`}
               >
@@ -1115,7 +1115,7 @@ const ChatInterface = () => {
           <button
             onClick={() => handleChatSubmit()}
             disabled={chatLoading || !chatInput.trim()}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+            className="px-4 py-2 bg-black text-white rounded-lg hover:bg-[linear-gradient(68.94deg,#c3aab2_-4.77%,#9ec_46.72%,#80c0c8_90.23%,#4b8bfa_134.46%)] disabled:opacity-50"
           >
             Надіслати
           </button>
@@ -1186,7 +1186,7 @@ const ChatInterface = () => {
             href={`/documents/${selectedDoc.id}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+            className="block w-full text-center bg-black text-white py-3 rounded-lg font-semibold hover:bg-[linear-gradient(68.94deg,#c3aab2_-4.77%,#9ec_46.72%,#80c0c8_90.23%,#4b8bfa_134.46%)] transition"
           >
             Переглянути документ →
           </Link>
