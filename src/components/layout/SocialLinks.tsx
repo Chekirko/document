@@ -14,23 +14,23 @@ interface SocialLinksProps {
 
 const socialData = [
   {
-    href: "https://www.facebook.com/smr.gov.ua",
+    href: "https://www.facebook.com/boryslavrada/?locale=uk_UA",
     label: "Facebook",
     Icon: FacebookIcon,
   },
   {
-    href: "https://www.youtube.com/@RadaSumy",
+    href: "https://www.youtube.com/@boryslavrada",
     label: "YouTube",
     Icon: YoutubeIcon,
   },
-  { href: "https://cutt.ly/9rOePTlL", label: "Viber", Icon: ViberIcon },
+  { href: "/", label: "Viber", Icon: ViberIcon },
   {
-    href: "https://t.me/sumskamiskarada",
+    href: "https://t.me/boryslavrada",
     label: "Telegram",
     Icon: TelegramIcon,
   },
   {
-    href: "https://gromada.smr.gov.ua/rss.xml",
+    href: "/",
     label: "RSS Feed",
     Icon: RssIcon,
   },
