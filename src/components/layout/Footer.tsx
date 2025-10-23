@@ -16,37 +16,37 @@ export default function Footer() {
               <h3 className="font-bold text-base mb-4 uppercase">ГРОМАДА</h3>
               <nav className="flex flex-col gap-2.5">
                 <Link
-                  href="https://gromada.smr.gov.ua/contacts"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Контакти та звернення
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/persons/13563"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
-                  Секретар Сумської міської ради
+                  Секретар Бориславської міської ради
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/persons"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Депутатський корпус
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/committee"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Виконком
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/investition-passport"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Інвестиційний паспорт
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/card"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Паспорт громади
@@ -85,25 +85,25 @@ export default function Footer() {
               </h3>
               <nav className="flex flex-col gap-2.5">
                 <Link
-                  href="https://gromada.smr.gov.ua/pub-info"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Публічна інформація
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/finance"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Фінанси
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/documents"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Документи (НПА)
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/regulatory-policy"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Регуляторна діяльність
@@ -112,13 +112,14 @@ export default function Footer() {
                   href="#"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
-                  Статут Сумської міської територіальної громади
+                  Статут Бориславської міської територіальної громади
                 </Link>
                 <Link
                   href="#"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
-                  Стратегія розвитку Сумської міської територіальної громади
+                  Стратегія розвитку Бориславської міської територіальної
+                  громади
                 </Link>
               </nav>
             </div>
@@ -128,25 +129,25 @@ export default function Footer() {
               <h3 className="font-bold text-base mb-4 uppercase">ГРОМАДЯНАМ</h3>
               <nav className="flex flex-col gap-2.5">
                 <Link
-                  href="https://gromada.smr.gov.ua/cabinet"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Кабінет мешканця
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/cnap"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Послуги
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/bot"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Чат-бот «СВОЇ»
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/institutions"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Довідник закладів
@@ -179,25 +180,25 @@ export default function Footer() {
               </h3>
               <nav className="flex flex-col gap-2.5">
                 <Link
-                  href="https://gromada.smr.gov.ua/e-dem/petition"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Електронні петиції
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/e-dem/consultation"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Електронні консультації
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/pages/234756-spivvlasnikam-shhodo-upravlinnia-bagatokvartirnim-budinkom"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Співвласникам багатоквартирних будинків
                 </Link>
                 <Link
-                  href="https://gromada.smr.gov.ua/pages/235984-organi-samoorganizaciyi-naselennia"
+                  href="/"
                   className="text-[15px] leading-relaxed hover:underline"
                 >
                   Органи самоорганізації населення
